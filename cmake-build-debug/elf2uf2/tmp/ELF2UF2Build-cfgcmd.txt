@@ -1,1 +1,0 @@
-cmd='/Users/maxi/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/bin/cmake;-GNinja;<SOURCE_DIR><SOURCE_SUBDIR>'
