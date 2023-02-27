@@ -10,6 +10,7 @@
 * extend Readme
 * figure out how the _elastic-ai.runtime.enV5_ can be used as a dependency without having to add each src directory
   * alternatively: write a macro that adds each directory from the submodule src directory
+* briefly explain how Clion uses CMake profiles and configurations
 
 This project explains how to use the _elastic-ai.runtime.enV5_ as a submodule for further development.
 Although the _elastic-ai.runtime.enV5_ project is more automated, this project requires more steps to set up.
