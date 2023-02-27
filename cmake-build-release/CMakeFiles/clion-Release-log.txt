@@ -1,0 +1,19 @@
+"/Users/maxi/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Release "-DCMAKE_MAKE_PROGRAM=/Users/maxi/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/ninja/mac/ninja" -G Ninja -S /Users/maxi/Desktop/ENv5_Base_Project -B /Users/maxi/Desktop/ENv5_Base_Project/cmake-build-release
+PICO_SDK_PATH is /Users/maxi/Desktop/ENv5_Base_Project/extern/elastic-ai.runtime.enV5/extern/pico-sdk
+Defaulting PICO_PLATFORM to rp2040 since not specified.
+Defaulting PICO platform compiler to pico_arm_gcc since not specified.
+PICO compiler is pico_arm_gcc
+-- The C compiler identification is GNU 10.3.1
+-- The CXX compiler identification is GNU 10.3.1
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/local/bin/arm-none-eabi-gcc
+Build type is Release
+Defaulting PICO target board to pico since not specified.
+Using board configuration from /Users/maxi/Desktop/ENv5_Base_Project/extern/elastic-ai.runtime.enV5/extern/pico-sdk/src/boards/include/boards/pico.h
+-- Found Python3: /usr/local/Frameworks/Python.framework/Versions/3.11/bin/python3.11 (found version "3.11.2") found components: Interpreter 
+TinyUSB available at /Users/maxi/Desktop/ENv5_Base_Project/extern/elastic-ai.runtime.enV5/extern/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040; enabling build support for USB.
+cyw43-driver available at /Users/maxi/Desktop/ENv5_Base_Project/extern/elastic-ai.runtime.enV5/extern/pico-sdk/lib/cyw43-driver
+lwIP available at /Users/maxi/Desktop/ENv5_Base_Project/extern/elastic-ai.runtime.enV5/extern/pico-sdk/lib/lwip
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/maxi/Desktop/ENv5_Base_Project/cmake-build-release

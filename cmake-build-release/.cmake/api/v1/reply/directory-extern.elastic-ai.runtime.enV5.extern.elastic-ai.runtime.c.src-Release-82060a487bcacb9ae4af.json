@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "extern/elastic-ai.runtime.enV5/extern/elastic-ai.runtime.c/src",
+		"source" : "extern/elastic-ai.runtime.enV5/extern/elastic-ai.runtime.c/src"
+	}
+}

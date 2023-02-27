@@ -1,0 +1,97 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"extern/elastic-ai.runtime.enV5/extern/unity/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 141,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 150,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 156,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"extern/elastic-ai.runtime.enV5/extern/unity/libunity.a"
+			],
+			"targetId" : "unity::@c8a8eccfd340386167e1",
+			"targetIndex" : 29,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "library",
+			"destination" : "include/unity",
+			"paths" : 
+			[
+				"extern/elastic-ai.runtime.enV5/extern/unity/src/unity.h",
+				"extern/elastic-ai.runtime.enV5/extern/unity/src/unity_internals.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/unity",
+			"exportName" : "unityTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "unity::@c8a8eccfd340386167e1",
+					"index" : 29
+				}
+			],
+			"paths" : 
+			[
+				"extern/elastic-ai.runtime.enV5/extern/unity/CMakeFiles/Export/80da942aa44c821c5569bae18496db2c/unityTargets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/unity",
+			"paths" : 
+			[
+				"extern/elastic-ai.runtime.enV5/extern/unity/unityConfig.cmake",
+				"cmake-build-test/extern/elastic-ai.runtime.enV5/extern/unity/unityConfigVersion.cmake"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "extern/elastic-ai.runtime.enV5/extern/unity",
+		"source" : "extern/elastic-ai.runtime.enV5/extern/unity"
+	}
+}

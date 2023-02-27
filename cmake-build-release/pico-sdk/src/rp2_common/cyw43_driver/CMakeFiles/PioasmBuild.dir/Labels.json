@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/maxi/Desktop/ENv5_Base_Project/cmake-build-release/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild"
+		},
+		{
+			"file" : "/Users/maxi/Desktop/ENv5_Base_Project/cmake-build-release/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild.rule"
+		},
+		{
+			"file" : "/Users/maxi/Desktop/ENv5_Base_Project/cmake-build-release/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild-complete.rule"
+		},
+		{
+			"file" : "/Users/maxi/Desktop/ENv5_Base_Project/cmake-build-release/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule"
+		},
+		{
+			"file" : "/Users/maxi/Desktop/ENv5_Base_Project/cmake-build-release/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule"
+		},
+		{
+			"file" : "/Users/maxi/Desktop/ENv5_Base_Project/cmake-build-release/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule"
+		},
+		{
+			"file" : "/Users/maxi/Desktop/ENv5_Base_Project/cmake-build-release/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule"
+		},
+		{
+			"file" : "/Users/maxi/Desktop/ENv5_Base_Project/cmake-build-release/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule"
+		},
+		{
+			"file" : "/Users/maxi/Desktop/ENv5_Base_Project/cmake-build-release/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule"
+		},
+		{
+			"file" : "/Users/maxi/Desktop/ENv5_Base_Project/cmake-build-release/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"PioasmBuild"
+		],
+		"name" : "PioasmBuild"
+	}
+}

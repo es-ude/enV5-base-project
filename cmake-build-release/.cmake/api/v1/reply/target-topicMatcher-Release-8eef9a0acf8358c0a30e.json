@@ -1,0 +1,103 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "extern/elastic-ai.runtime.enV5/extern/elastic-ai.runtime.c/src/libtopicMatcher.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"extern/elastic-ai.runtime.enV5/extern/elastic-ai.runtime.c/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-mcpu=cortex-m0plus -mthumb -O3 -DNDEBUG -fdiagnostics-color=always"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/Users/maxi/Desktop/ENv5_Base_Project/extern/elastic-ai.runtime.enV5/extern/elastic-ai.runtime.c/src"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"id" : "topicMatcher::@0e22ddbe4d7de9fd4ed4",
+	"name" : "topicMatcher",
+	"nameOnDisk" : "libtopicMatcher.a",
+	"paths" : 
+	{
+		"build" : "extern/elastic-ai.runtime.enV5/extern/elastic-ai.runtime.c/src",
+		"source" : "extern/elastic-ai.runtime.enV5/extern/elastic-ai.runtime.c/src"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "extern/elastic-ai.runtime.enV5/extern/elastic-ai.runtime.c/src/TopicMatcher.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "extern/elastic-ai.runtime.enV5/extern/elastic-ai.runtime.c/src/TopicMatcher.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

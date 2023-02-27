@@ -1,0 +1,6 @@
+# ninja log v5
+3	12	0	clean	2b4665088e9bb5cc
+2	65	1677515759155545996	test/unit/CMakeFiles/unit-test_first.dir/UnittestFirst.c.o	f9030fc2fae38685
+2	105	1677515759195797991	extern/elastic-ai.runtime.enV5/extern/unity/CMakeFiles/unity.dir/src/unity.c.o	9e1e471585220ebc
+105	174	1677515759268355000	extern/elastic-ai.runtime.enV5/extern/unity/libunity.a	a1dbaeeab1aa74a4
+174	236	1677515759327179902	test/unit/unit-test_first	22cd73c1d5dddfe
