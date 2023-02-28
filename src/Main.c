@@ -1,9 +1,12 @@
+#define SOURCE_FILE "MAIN"
+
 #include <pico/stdlib.h>
 #include <hardware/watchdog.h>
 #include <pico/bootrom.h>
 #include "Esp.h"
 #include "FreeRtosQueueWrapper.h"
 #include "FreeRtosTaskWrapper.h"
+#include "Common.h"
 
 #define LED0_PIN 22
 #define LED1_PIN 24
@@ -25,9 +28,12 @@ void leds_all_off()
 }
 
 void mainTask(void) {
+    PRINT_DEBUG("LEDs should now turn on\n");
     leds_all_on();
     freeRtosTaskWrapperTaskSleep(1000);
     leds_all_off();
+    PRINT_DEBUG("LEDs should now turned off\n");
+    printf("you can also print with this, or print a number: %d", 1);
 }
 
 // Goes into bootloader mode when 'r' is pressed
