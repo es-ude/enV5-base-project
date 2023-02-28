@@ -1,13 +1,13 @@
 # Introduction
 
+This project explains how to use the _elastic-ai.runtime.enV5_ as a submodule for further development.
+Although the _elastic-ai.runtime.enV5_ project is more automated, this project requires more steps to set up.
+
 ## Todo
 
 * figure out why failing tests are reported as succeeded (tests actually fail according to log output)
 * add working main
   * blinking LEDs do not work for some reason
-
-This project explains how to use the _elastic-ai.runtime.enV5_ as a submodule for further development.
-Although the _elastic-ai.runtime.enV5_ project is more automated, this project requires more steps to set up.
 
 ## Prerequisites
 
