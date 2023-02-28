@@ -32,7 +32,7 @@ else ()
     add_subdirectory(extern/elastic-ai.runtime.enV5/src/gpio)
     add_subdirectory(extern/elastic-ai.runtime.enV5/src/network)
 
-#    include_src()
+#    include_src() # you still need to include your own sources
 
     if (TARGET tinyusb_device)
         add_subdirectory(test/hardware)
