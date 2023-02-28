@@ -5,9 +5,7 @@ Although the _elastic-ai.runtime.enV5_ project is more automated, this project r
 
 ## Todo
 
-* figure out why failing tests are reported as succeeded (tests actually fail according to log output)
-* add working main
-  * blinking LEDs do not work for some reason
+* fix main, where the LEDs won't blink
 
 ## Prerequisites
 

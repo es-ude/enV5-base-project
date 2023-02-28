@@ -13,5 +13,5 @@ int main(void) {
 
     RUN_TEST(test_shouldFail);
 
-    UNITY_END();
+    return UNITY_END();
 }
