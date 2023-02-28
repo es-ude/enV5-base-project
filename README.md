@@ -10,6 +10,7 @@ Although the _elastic-ai.runtime.enV5_ project is more automated, this project r
 ## Prerequisites
 
 * cmake >= 3.13
+* arm-non-eabi-gcc
 * python3
 * ninja-build
 
