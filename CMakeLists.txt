@@ -24,14 +24,27 @@ else ()
 
     add_subdirectory(extern/elastic-ai.runtime.enV5/extern/elastic-ai.runtime.c)
     pico_sdk_init()
+
+
     add_subdirectory(extern/elastic-ai.runtime.enV5/extern/freeRTOS)
-    add_subdirectory(extern/elastic-ai.runtime.enV5/src/freeRtos)
-    add_subdirectory(extern/elastic-ai.runtime.enV5/src/esp)
+
+    # libraries from the elastic-ai.runtime.enV5 repo
+    add_subdirectory(extern/elastic-ai.runtime.enV5/src/adxl345b)
     add_subdirectory(extern/elastic-ai.runtime.enV5/src/atCommands)
-    add_subdirectory(extern/elastic-ai.runtime.enV5/src/uart)
-    add_subdirectory(extern/elastic-ai.runtime.enV5/src/gpio)
-    add_subdirectory(extern/elastic-ai.runtime.enV5/src/network)
     add_subdirectory(extern/elastic-ai.runtime.enV5/src/broker)
+    add_subdirectory(extern/elastic-ai.runtime.enV5/src/env5)
+    add_subdirectory(extern/elastic-ai.runtime.enV5/src/esp)
+    add_subdirectory(extern/elastic-ai.runtime.enV5/src/flash)
+    add_subdirectory(extern/elastic-ai.runtime.enV5/src/fpgaConfig)
+    add_subdirectory(extern/elastic-ai.runtime.enV5/src/freeRtos)
+    add_subdirectory(extern/elastic-ai.runtime.enV5/src/gpio)
+    add_subdirectory(extern/elastic-ai.runtime.enV5/src/i2c)
+    add_subdirectory(extern/elastic-ai.runtime.enV5/src/middleware)
+    add_subdirectory(extern/elastic-ai.runtime.enV5/src/network)
+    add_subdirectory(extern/elastic-ai.runtime.enV5/src/pac193x)
+    add_subdirectory(extern/elastic-ai.runtime.enV5/src/sht3x)
+    add_subdirectory(extern/elastic-ai.runtime.enV5/src/spi)
+    add_subdirectory(extern/elastic-ai.runtime.enV5/src/uart)
 
 #    include_src() # you still need to include your own sources
 
