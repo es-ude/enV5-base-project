@@ -17,6 +17,7 @@ Although the _elastic-ai.runtime.enV5_ project is more automated, this project r
 
 * cmake >= 3.13
 * python3
+* ninja-build
 
 ```bash
 git submodule update --init --recursive
@@ -47,7 +48,17 @@ not recognize the inclusion of the unity.h file, as it is only included under th
 
 ```bash
 cmake -B cmake-build-debug -D DEBUG_OUTPUT:BOOL=ON -G Ninja .
+cmake --build cmake-build-debug -j 4 --target main
 ```
+
+## How to build an integration Test
+
+```bash
+cmake -B cmake-build-debug -D DEBUG_OUTPUT:BOOL=ON -G Ninja .
+cmake --build cmake-build-debug -j 4 --target hardware-test_MQTTPublish
+```
+
+If you omit the `--target` flag, cmake will build every hardware target.
 
 ## How to build and run a unit test
 
