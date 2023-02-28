@@ -31,6 +31,7 @@ else ()
     add_subdirectory(extern/elastic-ai.runtime.enV5/src/uart)
     add_subdirectory(extern/elastic-ai.runtime.enV5/src/gpio)
     add_subdirectory(extern/elastic-ai.runtime.enV5/src/network)
+    add_subdirectory(extern/elastic-ai.runtime.enV5/src/broker)
 
 #    include_src() # you still need to include your own sources
 
