@@ -1,3 +1,14 @@
+### IntelliJ IDEA ###
+.idea/
+
+### commitlint.js ###
+.husky/
+node_modules/
+package-lock.json
+package.json
+commitlint.config.js
+
+
 # Created by https://www.toptal.com/developers/gitignore/api/macos,cmake
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,cmake
 
