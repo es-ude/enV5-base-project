@@ -3,10 +3,6 @@
 This project explains how to use the _elastic-ai.runtime.enV5_ as a submodule for further development.
 Although the _elastic-ai.runtime.enV5_ project is more automated, this project requires more steps to set up.
 
-## Todo
-
-* fix main, where the LEDs won't blink
-
 ## Prerequisites
 
 * cmake >= 3.13
@@ -21,6 +17,7 @@ git submodule update --init --recursive
 ## Project structure
 
 This project contains various folders:
+
 * `extern`: stores external git submodules, i.e. the elastic-ai.runtime.enV5
 * `out`: stores unit test executables, as well as _.uf2_ binary files for the enV5
 * `src`: contains _Main.c_, helpers and your source code
@@ -35,9 +32,9 @@ via one of the profiles. There are three profiles in total:
 * `Release`: build targets for the RP2040 without debug logs
 * `Unit Test`: regular unit test executables
 
-By default, the `Release` and `Unit Test` profiles are disabled. This is because CMake will otherwise fail during the 
-initial configuration. Switching the profiles also "fixes" include paths, so if you have a unit test open, Clion will 
-not recognize the inclusion of the unity.h file, as it is only included under the `Unit Test` profile. 
+By default, the `Release` and `Unit Test` profiles are disabled. This is because CMake will otherwise fail during the
+initial configuration. Switching the profiles also "fixes" include paths, so if you have a unit test open, Clion will
+not recognize the inclusion of the unity.h file, as it is only included under the `Unit Test` profile.
 
 ## How to build a binary
 
