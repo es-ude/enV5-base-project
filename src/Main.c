@@ -1,50 +1,67 @@
 #define SOURCE_FILE "MAIN"
 
-#include <pico/stdlib.h>
-#include <hardware/watchdog.h>
-#include <pico/bootrom.h>
+#include "Common.h"
 #include "Esp.h"
 #include "FreeRtosQueueWrapper.h"
 #include "FreeRtosTaskWrapper.h"
-#include "Common.h"
+#include <hardware/watchdog.h>
+#include <pico/bootrom.h>
+#include <pico/stdlib.h>
+
+/* region LED HANDLER */
 
 #define LED0_PIN 22
 #define LED1_PIN 24
 #define LED2_PIN 25
 
+void led_init(uint8_t gpio) {
+    gpio_init(gpio);
+    gpio_set_dir(gpio, GPIO_OUT);
+}
 
-void leds_all_on()
-{
+void leds_init() {
+    led_init(LED0_PIN);
+    led_init(LED1_PIN);
+    led_init(LED2_PIN);
+}
+
+void leds_all_on() {
     gpio_put(LED0_PIN, 1);
     gpio_put(LED1_PIN, 1);
     gpio_put(LED2_PIN, 1);
 }
 
-void leds_all_off()
-{
+void leds_all_off() {
     gpio_put(LED0_PIN, 0);
     gpio_put(LED1_PIN, 0);
     gpio_put(LED2_PIN, 0);
 }
 
-void mainTask(void) {
-    PRINT_DEBUG("LEDs should now turn on\n");
-    leds_all_on();
-    freeRtosTaskWrapperTaskSleep(1000);
-    leds_all_off();
-    PRINT_DEBUG("LEDs should now turned off\n");
-    printf("you can also print with this, or print a number: %d", 1);
+/* endregion LED HANDLER */
+
+_Noreturn void ledTask(void) {
+    while (true) {
+        PRINT("LEDs should now turn on\n");
+        leds_all_on();
+        freeRtosTaskWrapperTaskSleep(2000);
+        PRINT("LEDs should now turned off\n");
+        leds_all_off();
+        freeRtosTaskWrapperTaskSleep(2000);
+    }
 }
 
-// Goes into bootloader mode when 'r' is pressed
+/*! \brief Goes into bootloader mode when 'r' is pressed
+ */
 _Noreturn void enterBootModeTask(void) {
     while (true) {
         if (getchar_timeout_us(10) == 'r' || !stdio_usb_connected()) {
+            PRINT_DEBUG("Boot Mode request detected.")
             reset_usb_boot(0, 0);
         }
-        // Watchdog update needs to be performed frequent, otherwise the device
-        // will crash
+
+        // Watchdog update needs to be performed frequent, otherwise the device will crash
         watchdog_update();
+        PRINT_DEBUG("watchdog updated")
         freeRtosTaskWrapperTaskSleep(1000);
     }
 }
@@ -54,25 +71,31 @@ void init(void) {
     if (watchdog_enable_caused_reboot()) {
         reset_usb_boot(0, 0);
     }
-    // init usb, queue and watchdog
+
+    // init usb
     stdio_init_all();
-    // waits for usb connection, REMOVE to continue without waiting for
-    // connection
-    while ((!stdio_usb_connected()))
-        ;
-    // Checks connection to ESP and initializes
+    // waits for usb connection, REMOVE to continue without waiting for connection
+    while ((!stdio_usb_connected())) {}
+
+    // Checks connection to ESP and initialize ESP
     espInit();
-    // Create FreeRTOS task queue
+
+    // create freeRTOS task queue
     freeRtosQueueWrapperCreate();
+
     // enables watchdog to check for reboots
     watchdog_enable(2000, 1);
 }
 
 int main() {
+    // initialize hardware
     init();
-    freeRtosTaskWrapperRegisterTask(enterBootModeTask, "enterBootModeTask");
-    freeRtosTaskWrapperRegisterTask(mainTask, "mainTask");
+    leds_init();
 
-    // Starts FreeRTOS tasks
+    // add freeRTOS tasks
+    freeRtosTaskWrapperRegisterTask(enterBootModeTask, "enterBootModeTask");
+    freeRtosTaskWrapperRegisterTask(ledTask, "ledTask");
+
+    // starts freeRTOS tasks
     freeRtosTaskWrapperStartScheduler();
 }
