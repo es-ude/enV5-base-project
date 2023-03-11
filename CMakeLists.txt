@@ -20,10 +20,15 @@ else ()
     message(NOTICE "INFO: Building for enV5")
     set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
-    include_pico_sdk()
+    # inlcude pico-sdk from enV5
+    include(extern/elastic-ai.runtime.enV5/extern/pico-sdk/pico_sdk_init.cmake)
 
     project(enV5 C CXX ASM)
 
+    # initialize pico-sdk
+    pico_sdk_init()
+
+    # include enV5 libraries
     enV5_init()
 
 #    include_src() # you still need to include your own sources
