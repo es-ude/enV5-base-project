@@ -22,6 +22,7 @@ else ()
 
     # inlcude pico-sdk from enV5
     include(extern/elastic-ai.runtime.enV5/extern/pico-sdk/pico_sdk_init.cmake)
+    add_subdirectory(extern/elastic-ai.runtime.enV5/extern/freeRTOS/Kernel/portable/ThirdParty/GCC/RP2040 FREERTOS_KERNEL)
 
     project(enV5 C CXX ASM)
 

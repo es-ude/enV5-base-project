@@ -41,10 +41,10 @@ void leds_all_off() {
 
 _Noreturn void ledTask(void) {
     while (true) {
-        PRINT("LEDs should now turn on\n");
+        PRINT("LEDs should now turn on");
         leds_all_on();
         freeRtosTaskWrapperTaskSleep(2000);
-        PRINT("LEDs should now turned off\n");
+        PRINT("LEDs should now turned off");
         leds_all_off();
         freeRtosTaskWrapperTaskSleep(2000);
     }
@@ -93,8 +93,8 @@ int main() {
     leds_init();
 
     // add freeRTOS tasks
-    freeRtosTaskWrapperRegisterTask(enterBootModeTask, "enterBootModeTask");
-    freeRtosTaskWrapperRegisterTask(ledTask, "ledTask");
+    freeRtosTaskWrapperRegisterTask(enterBootModeTask, "enterBootModeTask", 0 , FREERTOS_CORE_0);
+    freeRtosTaskWrapperRegisterTask(ledTask, "ledTask", 0 , FREERTOS_CORE_1);
 
     // starts freeRTOS tasks
     freeRtosTaskWrapperStartScheduler();
