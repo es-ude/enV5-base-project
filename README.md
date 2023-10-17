@@ -1,6 +1,6 @@
 # enV5 Base Project
 
-This project explains how to use the _elastic-ai.runtime.enV5_ as a submodule for further development.
+This project explains how to use the [elastic-ai.runtime.enV5](https://github.com/es-ude/elastic-ai.runtime.enV5) as a submodule for further development.
 Although the _elastic-ai.runtime.enV5_ project is more automated, this project requires more steps to set up.
 
 ## Setup
