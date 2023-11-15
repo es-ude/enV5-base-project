@@ -18,4 +18,4 @@ target_link_libraries(hardware-test_MQTTPublish
         freeRtosUtils
         hardware-testHelper)
 target_compile_definitions(hardware-test_MQTTPublish PRIVATE DEBUG)
-make_to_output_file(hardware-test_MQTTPublish)
+create_enV5_executable(hardware-test_MQTTPublish)

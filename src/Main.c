@@ -4,9 +4,13 @@
 #include "Esp.h"
 #include "FreeRtosQueueWrapper.h"
 #include "FreeRtosTaskWrapper.h"
+#include "Network.h"
+
 #include <hardware/watchdog.h>
 #include <pico/bootrom.h>
 #include <pico/stdlib.h>
+
+extern networkCredentials_t networkCredentials;
 
 /* region LED HANDLER */
 
@@ -93,8 +97,8 @@ int main() {
     leds_init();
 
     // add freeRTOS tasks
-    freeRtosTaskWrapperRegisterTask(enterBootModeTask, "enterBootModeTask", 0 , FREERTOS_CORE_0);
-    freeRtosTaskWrapperRegisterTask(ledTask, "ledTask", 0 , FREERTOS_CORE_1);
+    freeRtosTaskWrapperRegisterTask(enterBootModeTask, "enterBootModeTask", 0, FREERTOS_CORE_0);
+    freeRtosTaskWrapperRegisterTask(ledTask, "ledTask", 0, FREERTOS_CORE_1);
 
     // starts freeRTOS tasks
     freeRtosTaskWrapperStartScheduler();

@@ -6,7 +6,7 @@
 #include "FreeRtosTaskWrapper.h"
 #include "MqttBroker.h"
 #include "Network.h"
-#include "NetworkConfiguration.h"
+#include "NetworkConfiguration.c"
 #include "hardware/watchdog.h"
 #include "pico/bootrom.h"
 #include "pico/stdlib.h"

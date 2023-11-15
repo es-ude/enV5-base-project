@@ -31,15 +31,13 @@ git submodule update --init --recursive
 ### Clion specific settings
 
 Clion automatically detects targets and adds them to the configurations in the upper right corner.
-These can be build via one of the profiles.
+These can be built via one of the profiles.
 There are three profiles in total:
 
 * `Debug`: build targets for the RP2040 with debug logs
 * `Release`: build targets for the RP2040 without debug logs
 * `Unit Test`: regular unit test executables
 
-By default, the `Release` and `Unit Test` profiles are disabled.
-This is because CMake will otherwise fail during the initial configuration.
 Switching the profiles also "fixes" include paths, so if you have a unit test open, Clion will not recognize the
 inclusion of the unity.h file, as it is only included under the `Unit Test` profile.
 
@@ -57,8 +55,8 @@ This project contains various folders:
 ### How to build a binary
 
 ```bash
-cmake -B cmake-build-debug -DDEBUG_OUTPUT:BOOL=ON -G Ninja .
-cmake --build cmake-build-debug -j 4 --target main
+cmake -B build/debug -DDEBUG_OUTPUT:BOOL=ON -G Ninja .
+cmake --build build/debug -j 4 --target main
 ```
 
 If you omit the `--target` flag, cmake will build every hardware target.
@@ -67,8 +65,8 @@ If you omit the `-DDEBUG_OUTPUT:BOOL=ON`, than the `PRINT_DEBUG` Macro will be d
 ### How to build an integration Test
 
 ```bash
-cmake -B cmake-build-debug -DDEBUG_OUTPUT:BOOL=ON -G Ninja .
-cmake --build cmake-build-debug -j 4 --target hardware-test_MQTTPublish
+cmake -B build/debug -DDEBUG_OUTPUT:BOOL=ON -G Ninja .
+cmake --build build/debug -j 4 --target hardware-test_MQTTPublish
 ```
 
 If you omit the `--target` flag, cmake will build every hardware target.
@@ -77,9 +75,9 @@ If you omit the `-DDEBUG_OUTPUT:BOOL=ON`, than the `PRINT_DEBUG` Macro will be d
 ### How to build and run the unit tests
 
 ```bash
-cmake -B cmake-build-test/test/unit -DUNIT_TEST:BOOL=ON -DDEBUG_OUTPUT:BOOL=ON -DCMAKE_BUILD_TYPE=DEBUG -G Ninja .
-cmake --build cmake-build-test/test/unit -j 4 --clean-first
-ctest --test-dir cmake-build-test/test/unit --output-on-failure
+cmake -B build/unit-tests/test/unit -DUNIT_TEST:BOOL=ON -DDEBUG_OUTPUT:BOOL=ON -DCMAKE_BUILD_TYPE=DEBUG -G Ninja .
+cmake --build build/unit-tests/test/unit -j 4 --clean-first
+ctest --test-dir build/unit-tests/test/unit --output-on-failure
 ```
 
 If you omit the `-DDEBUG_OUTPUT:BOOL=ON`, than the `PRINT_DEBUG` Macro will be disabled.
