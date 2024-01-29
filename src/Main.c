@@ -10,8 +10,6 @@
 #include <pico/bootrom.h>
 #include <pico/stdlib.h>
 
-extern networkCredentials_t networkCredentials;
-
 /* region LED HANDLER */
 
 #define LED0_PIN 22
@@ -95,6 +93,8 @@ int main() {
     // initialize hardware
     init();
     leds_init();
+
+    networkTryToConnectToNetworkUntilSuccessful();
 
     // add freeRTOS tasks
     freeRtosTaskWrapperRegisterTask(enterBootModeTask, "enterBootModeTask", 0, FREERTOS_CORE_0);

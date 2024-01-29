@@ -36,8 +36,7 @@ else ()
 
         # add your own executable
         add_executable(main
-                src/Main.c
-                src/NetworkConfiguration.c)
+                src/Main.c)
         target_include_directories(main PUBLIC ${CMAKE_SOURCE_DIR}/src)
         target_link_libraries(main
                 pico_stdlib

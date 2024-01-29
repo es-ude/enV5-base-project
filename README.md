@@ -41,6 +41,10 @@ There are three profiles in total:
 Switching the profiles also "fixes" include paths, so if you have a unit test open, Clion will not recognize the
 inclusion of the unity.h file, as it is only included under the `Unit Test` profile.
 
+### Network Settings
+
+You have to adjust the network/mqtt broker credentials which can be found in [network/config](extern/elastic-ai.runtime.enV5/src/network/config) as mentioned in the [network README](https://github.com/es-ude/elastic-ai.runtime.enV5/blob/main/src/network/README.adoc#_wifi_lib).
+
 ## Project structure
 
 This project contains various folders:
