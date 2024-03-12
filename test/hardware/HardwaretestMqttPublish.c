@@ -26,7 +26,7 @@ void publishTestData(uint16_t i) {
 }
 
 void _Noreturn mqttTask(void) {
-    PRINT("=== STARTING TEST ===")
+    PRINT("=== STARTING TEST ===");
 
     connectToNetwork();
     connectToMQTT();
@@ -42,7 +42,8 @@ void _Noreturn mqttTask(void) {
 int main() {
     initHardwareTest();
 
-    freeRtosTaskWrapperRegisterTask(enterBootModeTaskHardwareTest, "enterBootModeTask");
-    freeRtosTaskWrapperRegisterTask(mqttTask, "mqttTask");
+    freeRtosTaskWrapperRegisterTask(enterBootModeTaskHardwareTest, "enterBootModeTask", 0,
+                                    FREERTOS_CORE_0);
+    freeRtosTaskWrapperRegisterTask(mqttTask, "mqttTask", 0, FREERTOS_CORE_1);
     freeRtosTaskWrapperStartScheduler();
 }
