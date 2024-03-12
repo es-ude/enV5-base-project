@@ -57,13 +57,13 @@ _Noreturn void ledTask(void) {
 _Noreturn void enterBootModeTask(void) {
     while (true) {
         if (getchar_timeout_us(10) == 'r' || !stdio_usb_connected()) {
-            PRINT_DEBUG("Boot Mode request detected.")
+            PRINT_DEBUG("Boot Mode request detected.");
             reset_usb_boot(0, 0);
         }
 
         // Watchdog update needs to be performed frequent, otherwise the device will crash
         watchdog_update();
-        PRINT_DEBUG("watchdog updated")
+        PRINT_DEBUG("watchdog updated");
         freeRtosTaskWrapperTaskSleep(1000);
     }
 }

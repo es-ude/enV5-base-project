@@ -6,17 +6,16 @@
 #include "FreeRtosTaskWrapper.h"
 #include "MqttBroker.h"
 #include "Network.h"
-#include "NetworkConfiguration.c"
 #include "hardware/watchdog.h"
 #include "pico/bootrom.h"
 #include "pico/stdlib.h"
 
 void connectToNetwork(void) {
-    networkTryToConnectToNetworkUntilSuccessful(networkCredentials);
+    networkTryToConnectToNetworkUntilSuccessful();
 }
 
 void connectToMQTT(void) {
-    mqttBrokerConnectToBrokerUntilSuccessful(mqttHost, "eip://uni-due.de/es", "enV5");
+    mqttBrokerConnectToBrokerUntilSuccessful("eip://uni-due.de/es", "enV5");
 }
 
 void initHardwareTest(void) {
