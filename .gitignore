@@ -1,6 +1,7 @@
 ### Custom ignores
 out/
 build/
+NetworkConfig.c
 
 ### C++ template
 # Prerequisites

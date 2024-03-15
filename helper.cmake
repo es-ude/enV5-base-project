@@ -5,7 +5,7 @@ function(load_enV5)
     FetchContent_Declare(
             runtime_env5
             GIT_REPOSITORY https://github.com/es-ude/elastic-ai.runtime.enV5.git
-            GIT_TAG v3.3.1
+            GIT_TAG v3.5.0
     )
     FetchContent_Populate(runtime_env5)
 
