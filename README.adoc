@@ -34,7 +34,19 @@ For compiling the project, the required tools are:
 NOTE: If you use the CLion IDE as recommended, the build script generation is done by the IDE itself.
 If you want to do this by yourself, please refer to <<CMake>>.
 
-IMPORTANT: You have to adjust the network/mqtt broker credentials as mentioned in the link:https://github.com/es-ude/elastic-ai.runtime.enV5/blob/d862d803a56f0371f9a027b0f304b9ddfa7cd541/src/network/README.adoc[network README]!
+[IMPORTANT]
+====
+You have to adjust the network/mqtt broker credentials as mentioned in the link:https://github.com/es-ude/elastic-ai.runtime.enV5/blob/d862d803a56f0371f9a027b0f304b9ddfa7cd541/src/network/README.adoc[network README]!
+
+Alternatively, you can pass these settings via CMake Flags to the Profile initialization:
+
+- WiFi Name: `-D WIFI_SSID:STRING=<ssid>`
+- WiFi Password: `-D WIFI_PWD:STRING=<password>`
+- MQTT Host/IP: `-D MQTT_HOST:STRING=<host>`
+- MQTT Port: `-D MQTT_PORT:STRING=<port>`
+- MQTT Broker User: `-D MQTT_USER:STRING=<user>`
+- MQTT Password for User: `-D MQTT_PWD:STRING=<password>`
+====
 
 [#_cmake]
 == CMake
