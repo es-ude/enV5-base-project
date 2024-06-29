@@ -2,12 +2,12 @@
 
 void setUp() {}
 
-void tearDown(){}
+void tearDown() {}
 
-void test_shouldFail(void){
-    TEST_ASSERT_EQUAL(1,2);
+void test_shouldFail(void) {
+    TEST_FAIL();
 }
-void test_shouldPass(void){
+void test_shouldPass(void) {
     TEST_PASS();
 }
 

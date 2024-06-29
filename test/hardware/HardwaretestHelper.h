@@ -3,9 +3,9 @@
 
 void connectToNetwork(void);
 
-void connectToMQTT(void);
+void connectToMqttBroker(void);
 
-void initHardwareTest(void);
+void initializeHardwareTest(void);
 
 _Noreturn void enterBootModeTaskHardwareTest(void);
 

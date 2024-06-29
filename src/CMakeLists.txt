@@ -6,6 +6,7 @@ target_link_libraries(main
         pico_stdlib
         freeRtosUtils
         esp_lib
+        espBroker_lib
         network_lib
         http_lib
         uart_interface)

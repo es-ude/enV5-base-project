@@ -29,7 +29,7 @@ void _Noreturn mqttTask(void) {
     PRINT("=== STARTING TEST ===");
 
     connectToNetwork();
-    connectToMQTT();
+    connectToMqttBroker();
 
     uint64_t messageCounter = 0;
     while (1) {
@@ -40,7 +40,7 @@ void _Noreturn mqttTask(void) {
 }
 
 int main() {
-    initHardwareTest();
+    initializeHardwareTest();
 
     freeRtosTaskWrapperRegisterTask(enterBootModeTaskHardwareTest, "enterBootModeTask", 0,
                                     FREERTOS_CORE_0);
