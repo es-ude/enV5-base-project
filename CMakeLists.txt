@@ -45,6 +45,7 @@ else ()
 
         # add your own main target
         add_subdirectory(src)
+        add_subdirectory(examples)
     elseif (PICO_ON_DEVICE)
         message(WARNING "not building Project because TinyUSB submodule is not initialized in the SDK")
     endif ()
